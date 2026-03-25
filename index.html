@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div style="overflow: hidden">
@@ -14,9 +20,9 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="second.html">About us</a></li>
-            <li><a href="third.html">Yoga</a></li>
-            <li><a href="fourth.html">Pranovista</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="third.html">Pricing</a></li>
+            <li><a href="fourth.html">FAQs</a></li>
+            <li><a href="pricing.html">Contact Us</a></li>
             <li><a href="help.html">Help Center</a></li>
           </ul>
         </nav>
@@ -89,21 +95,33 @@
             <h3 class="card-title">Eiusmod cor</h3>
             <div class="card-features">
               <div class="feature-item feature-connect">
-                <span class="feature-icon"
-                  ><img src="./image/Vector (6).svg" alt="Connection"
-                /></span>
+                <div class="feature-icon">
+                  <img
+                    src="./image/Vector (6).svg"
+                    alt="Connection"
+                    class="feature-img"
+                  />
+                </div>
                 <p class="feature-text">Connection</p>
               </div>
               <div class="feature-share feature-item">
-                <span class="feature-icon"
-                  ><img src="./image/Vector (7).svg" alt="Share"
-                /></span>
+                <div class="feature-icon">
+                  <img
+                    src="./image/Vector (7).svg"
+                    alt="Share"
+                    class="feature-img"
+                  />
+                </div>
                 <p class="share-color">Share</p>
               </div>
               <div class="feature-instantiate feature-item">
-                <span class="feature-icon"
-                  ><img src="./image/Send.svg" alt="Instantiate"
-                /></span>
+                <div class="feature-icon">
+                  <img
+                    src="./image/Send.svg"
+                    alt="Instantiate"
+                    class="feature-img"
+                  />
+                </div>
                 <p class="lnstantiate-color">Instantiate</p>
               </div>
             </div>
@@ -185,75 +203,13 @@
           <h2 class="products-title">Our products</h2>
 
           <div class="products-filter">
-            <button class="filter-btn active">Best-sellers</button>
-            <button class="filter-btn">New products</button>
+            <button class="filter-btn active" data-filter="best">
+              Best-sellers
+            </button>
+            <button class="filter-btn" data-filter="new">New products</button>
           </div>
 
-          <div class="products-grid">
-            <div class="product-card">
-              <div class="product-badge">Best-seller</div>
-              <div class="product-image">
-                <img src="./image/product1.png" alt="Product 1" />
-              </div>
-              <h3 class="product-title">Product title</h3>
-              <p class="product-description">Deserunt non fugiat aute cons</p>
-              <div class="product-price">
-                <span class="current-price">$32</span>
-                <span class="original-price">$42</span>
-              </div>
-              <button class="add-to-cart">
-                <img src="./image/Shopping cart.png" alt="Add to Cart" />
-              </button>
-            </div>
-
-            <div class="product-card">
-              <div class="product-badge">Best-seller</div>
-              <div class="product-image">
-                <img src="./image/product2.png" alt="Product 2" />
-              </div>
-              <h3 class="product-title">Product title</h3>
-              <p class="product-description">Ut nostrud esse aute ipsum vo</p>
-              <div class="product-price">
-                <span class="current-price">$22</span>
-                <span class="original-price">$28</span>
-              </div>
-              <button class="add-to-cart">
-                <img src="./image/Shopping cart.png" alt="Add to Cart" />
-              </button>
-            </div>
-
-            <div class="product-card">
-              <div class="product-badge">Best-seller</div>
-              <div class="product-image">
-                <img src="./image/product3.png" alt="Product 3" />
-              </div>
-              <h3 class="product-title">Product title</h3>
-              <p class="product-description">Culpa ea exercitation amet co</p>
-              <div class="product-price">
-                <span class="current-price">$18</span>
-                <span class="original-price">$26</span>
-              </div>
-              <button class="add-to-cart">
-                <img src="./image/Shopping cart.png" alt="Add to Cart" />
-              </button>
-            </div>
-
-            <div class="product-card">
-              <div class="product-badge">Best-seller</div>
-              <div class="product-image">
-                <img src="./image/product4.png" alt="Product 4" />
-              </div>
-              <h3 class="product-title">Product title</h3>
-              <p class="product-description">Est veniam anim aute exercita</p>
-              <div class="product-price">
-                <span class="current-price">$48</span>
-                <span class="original-price">$56</span>
-              </div>
-              <button class="add-to-cart">
-                <img src="./image/Shopping cart.png" alt="Add to Cart" />
-              </button>
-            </div>
-          </div>
+          <div class="products-grid" id="productsGrid"></div>
         </div>
       </section>
 
@@ -329,51 +285,17 @@
       <section class="benefits-section">
         <div class="benefits-tabs">
           <button class="tab-btn active" data-tab="benefits">Benefits</button>
+          <div class="line"></div>
           <button class="tab-btn" data-tab="ingredients">Ingredients</button>
-          <button class="tab-btn" data-tab="how-to-use">How to use</button>
+          <div class="line"></div>
+          <button class="tab-btn" data-tab="how">How to use</button>
+          <div class="line"></div>
           <button class="tab-btn" data-tab="reviews">Reviews</button>
+          <div class="line"></div>
           <button class="tab-btn" data-tab="faqs">FAQs</button>
         </div>
 
-        <div class="benefits-content">
-          <div class="benefits-text">
-            <h2 class="benefits-title">Benefits</h2>
-            <p class="benefits-paragraph">
-              Consectetur excepteur elit ullamco incididunt voluptate tempor
-              exercitation. Lorem commodo ullamco quis velit officia aute
-              laboris elit sit exercitation ut esse pariatur occaecat quis
-            </p>
-
-            <div class="benefits-subsection">
-              <h3 class="benefits-subtitle">Laboris consequat ad</h3>
-              <p class="benefits-paragraph">
-                Consectetur excepteur elit ullamco incididunt voluptate tempor
-                exercitation. Lorem commodo ullamco quis velit officia aute
-                laboris elit sit exercitation ut esse pariatur
-              </p>
-            </div>
-
-            <div class="benefits-subsection">
-              <h3 class="benefits-subtitle">Duis duis do labore pariatur</h3>
-              <p class="benefits-paragraph">
-                Ad qui aliqua nulla nostrud consectetur laboris nostrud commodo
-                voluptate. Lorem id qui laborum aute voluptate
-              </p>
-            </div>
-
-            <div class="benefits-subsection">
-              <h3 class="benefits-subtitle">Deserunt ex</h3>
-              <p class="benefits-paragraph">
-                Cupidatat culpa id do laboris nisl aliqua eu. Veniam aliqua duis
-                Lorem adipisicing et minim velit quis
-              </p>
-            </div>
-          </div>
-
-          <div class="benefits-image">
-            <img src="./image/gray.png" alt="Benefits" />
-          </div>
-        </div>
+        <div class="benefits-content" id="benefitsContent"></div>
       </section>
 
       <section class="blog-section">
@@ -391,14 +313,14 @@
               <div class="blog-nav">
                 <button class="blog-nav-btn-prev">
                   <img
-                    src="./image/Chevron left large.png"
+                    src="./img/Vector (11).svg"
                     alt="Previous"
                     class="blog-nav-icon"
                   />
                 </button>
                 <button class="blog-nav-btn next">
                   <img
-                    src="./image/Chevron right large.png"
+                    src="./img/Vector (10).svg"
                     alt="Next"
                     class="blog-nav-icon"
                   />
@@ -603,10 +525,19 @@
             <p class="newsletter-text">
               Duis ea tempor commodo amet reprehende
             </p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Input your email" required />
+            <div class="newsletter-section">
+              <div class="newsletter-form">
+                <img src="./image/Mail.png" alt="" class="newsletter-img" />
+                <input
+                  type="email"
+                  placeholder="Input your email"
+                  required
+                  class="newsletter-input"
+                />
+              </div>
+
               <button type="submit" class="newsletter-btn">Subscribe</button>
-            </form>
+            </div>
             <div class="footer-socials">
               <a href="#" aria-label="Twitter">
                 <img
@@ -647,5 +578,6 @@
         </div>
       </footer>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
