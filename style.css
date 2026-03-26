@@ -135,6 +135,7 @@ header {
 }
 
 .signup-btn:hover {
+  color: #ffffff;
   background-color: #525dd6;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
@@ -2334,7 +2335,6 @@ header {
   border-radius: 16px;
   padding: 32px 28px;
   width: 320px;
-  box-shadow: 0 6px 18px rgba(30, 30, 60, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2468,17 +2468,6 @@ header {
   justify-content: center;
   align-items: stretch;
   margin-top: 20px;
-}
-
-.plan-card {
-  background: #f7f8fb;
-  border-radius: 16px;
-  padding: 24px;
-  width: 320px;
-  box-shadow: 0 6px 18px rgba(30, 30, 60, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .featured-badge {
@@ -2678,6 +2667,7 @@ header {
 .price {
   font-size: 48px;
   font-weight: 700;
+  font-family: "Archivo", sans-serif;
   line-height: 68px;
 }
 
@@ -2805,9 +2795,10 @@ header {
   justify-content: center;
   gap: 10px;
   background: linear-gradient(90deg, #6a6bdc, #5f63d6);
-  padding: 12px 20px;
-  border-radius: 30px;
+  padding: 14px 20px;
+  border-radius: 16px;
   width: 100%;
+  border: 1px solid #4850e4;
 }
 
 .search-box input {
